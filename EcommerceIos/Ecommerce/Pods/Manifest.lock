@@ -1,0 +1,16 @@
+PODS:
+  - NicoProgress (0.3.0)
+
+DEPENDENCIES:
+  - NicoProgress
+
+SPEC REPOS:
+  trunk:
+    - NicoProgress
+
+SPEC CHECKSUMS:
+  NicoProgress: 79ef8f1debe2378f7d5e97142c4280ef4a9227b8
+
+PODFILE CHECKSUM: 4ed1906083248dcd14604abb3fde94369dcf08a1
+
+COCOAPODS: 1.11.2

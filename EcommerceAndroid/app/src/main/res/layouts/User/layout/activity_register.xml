@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2e5772"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true">
+        <!--<androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#2E5772"
+            app:layout_collapseMode="pin"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+        </androidx.appcompat.widget.Toolbar> -->
+    </com.google.android.material.appbar.AppBarLayout>
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="35dp"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Organization Name"
+                    android:textColor="#4F4F4F"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ed_organization_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/layout6"
+                    android:hint="Organization Name"
+                    android:paddingLeft="7dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Your Mobile No"
+                    android:textColor="#4F4F4F"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ed_mobile_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/layout6"
+                    android:hint="Mobile No"
+                    android:inputType="number"
+                    android:paddingLeft="7dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Your Email ID"
+                    android:textColor="#4F4F4F"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/ed_email_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/layout6"
+                    android:hint="Email ID"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="7dp"
+                    android:textSize="14sp" />
+
+                <!--code for face attendance,(view/se;ect task), leave balance, starts -->
+
+                <!--Face attendance part starts-->
+
+                <!--code for face attendance,(view/se;ect task), leave balance, ends -->
+
+                <LinearLayout
+                    android:id="@+id/ll_button"
+                    android:layout_width="150dp"
+                    android:layout_height="65dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/layout7"
+                        android:gravity="center"
+                        android:text="Register"
+                        android:textColor="#4F4F4F"
+                        android:textSize="19sp" />
+                    <!-- </LinearLayout> -->
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+        <!--button code starts -->
+
+        <!--button code ends -->
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
