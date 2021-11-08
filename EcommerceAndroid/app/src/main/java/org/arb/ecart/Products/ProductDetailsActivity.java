@@ -86,11 +86,31 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
 
     public void LoadData(){
         ProductListModel productListModel = new ProductListModel();
-        productListModel.setImage(R.drawable.oppo);
+        productListModel.setImage(R.drawable.firetvstickamazon);
         productListModel.setPrice("Rs 8000");
         productListModelArrayList.add(productListModel);
 
         ProductListModel productListModel1 = new ProductListModel();
+        productListModel1.setImage(R.drawable.firetvstickamazon02);
+        productListModel1.setPrice("Rs 8000");
+        productListModelArrayList.add(productListModel1);
+
+        ProductListModel productListModel2 = new ProductListModel();
+        productListModel2.setImage(R.drawable.firetvstickamazon03);
+        productListModel2.setPrice("Rs 8000");
+        productListModelArrayList.add(productListModel2);
+
+        ProductListModel productListModel3 = new ProductListModel();
+        productListModel3.setImage(R.drawable.firetvstickamazon04);
+        productListModel3.setPrice("Rs 8000");
+        productListModelArrayList.add(productListModel3);
+
+        ProductListModel productListModel4 = new ProductListModel();
+        productListModel4.setImage(R.drawable.firetvstickamazon05);
+        productListModel4.setPrice("Rs 8000");
+        productListModelArrayList.add(productListModel4);
+
+        /*ProductListModel productListModel1 = new ProductListModel();
         productListModel1.setImage(R.drawable.oppo);
         productListModel1.setPrice("Rs 8000");
         productListModelArrayList.add(productListModel1);
@@ -103,7 +123,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
         ProductListModel productListModel3 = new ProductListModel();
         productListModel3.setImage(R.drawable.oppo);
         productListModel3.setPrice("Rs 8000");
-        productListModelArrayList.add(productListModel3);
+        productListModelArrayList.add(productListModel3);*/
 
         recycler_view.setAdapter(customProductDetailsAdapter);
 

@@ -8,8 +8,7 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/cordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -107,11 +106,12 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="match_parent"
+                            android:layout_width="350dp"
                             android:layout_height="350dp"
+                            android:layout_gravity="center_horizontal"
                             android:layout_marginLeft="2dp"
                             android:layout_marginRight="2dp"
-                            android:background="@drawable/oppo" />
+                            android:background="@drawable/firetvstickamazon" />
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
