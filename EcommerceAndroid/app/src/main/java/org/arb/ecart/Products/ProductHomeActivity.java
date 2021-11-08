@@ -92,6 +92,7 @@ public class ProductHomeActivity extends AppCompatActivity implements Navigation
         //==========Recycler code initializing and setting layoutManager starts======
         recycler_view_banner = findViewById(R.id.recycler_view_banner);
 
+
         GridLayoutManager gridLayoutManagerBanner = new GridLayoutManager(getApplicationContext(),1,RecyclerView.HORIZONTAL,false);
 //        gridLayoutManager.setOrientation(LinearLayoutManager.HORIZONTAL);
         recycler_view_banner.setLayoutManager(gridLayoutManagerBanner);
