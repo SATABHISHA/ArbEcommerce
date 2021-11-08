@@ -8,11 +8,9 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 <androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/cordinatorLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
@@ -53,8 +51,8 @@
 
                 <ImageView
                     android:id="@+id/img_cart"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:layout_toLeftOf="@id/img_profile"
@@ -62,8 +60,8 @@
 
                 <ImageView
                     android:id="@+id/img_wishlist"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:layout_toLeftOf="@id/img_cart"
@@ -73,7 +71,7 @@
         </androidx.appcompat.widget.Toolbar>
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="35dp"
             android:background="@drawable/layout_custom_search"
             android:layout_marginTop="0dp"
             android:layout_marginLeft="15dp"
@@ -99,11 +97,11 @@
 
             <ImageView
                 android:id="@+id/img_search_logo"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="0dp"
                 android:padding="5dp"
                 android:src="@drawable/magnifier" />
 
@@ -121,13 +119,13 @@
         android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:gravity="center"
             android:background="#E7400C">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recycler_view_banner"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_vertical|center_horizontal"
@@ -189,28 +187,40 @@
        <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="35dp"
-           android:layout_marginTop="10dp">
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/filter"/>
+           android:layout_marginTop="10dp"
+           android:visibility="visible">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_centerInParent="true"
+               android:layout_marginLeft="10dp"
+               android:text="Today's Deal"
+               android:textColor="#424141"
+               android:textStyle="bold" />
+          <!-- <ImageView
+               android:layout_width="30dp"
+               android:layout_height="30dp"
+               android:layout_marginLeft="20dp"
+               android:background="@drawable/filter" />
            <TextView
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:layout_alignParentRight="true"
                android:layout_centerVertical="true"
                android:layout_marginRight="20dp"
-               android:text="Price Low-High"/>
+               android:text="Price Low-High"/> -->
        </RelativeLayout>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
             android:layout_marginBottom="20dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
             android:layout_weight="1"
-            android:padding="10dp"
             app:cardElevation="0dp"
             app:cardUseCompatPadding="false">
 
@@ -230,8 +240,11 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/layout9"
-                android:paddingLeft="0dp"
+                android:paddingLeft="1dp"
+                android:paddingBottom="1dp"
                 android:paddingRight="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
                 android:visibility="visible">
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -239,6 +252,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
                     android:scrollbars="vertical" />
                 <!--  <Button
                       android:id="@+id/btn_dwnload_test"

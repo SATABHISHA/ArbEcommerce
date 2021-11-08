@@ -6,16 +6,17 @@
         <entry key="app/src/main/res/drawable/layout6.xml" value="0.2175925925925926" />
         <entry key="app/src/main/res/drawable/layout7.xml" value="0.21296296296296297" />
         <entry key="app/src/main/res/drawable/layout8.xml" value="0.14" />
-        <entry key="app/src/main/res/drawable/layout9.xml" value="0.16" />
+        <entry key="app/src/main/res/drawable/layout9.xml" value="0.12" />
         <entry key="app/src/main/res/drawable/layout_custom_search.xml" value="0.175" />
+        <entry key="app/src/main/res/drawable/strikethrough.xml" value="0.1215" />
         <entry key="app/src/main/res/drawable/top_border_button.xml" value="0.2175925925925926" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22291666666666668" />
         <entry key="app/src/main/res/layouts/Products/layout/activity_product_details.xml" value="0.25" />
-        <entry key="app/src/main/res/layouts/Products/layout/activity_product_home.xml" value="0.18" />
+        <entry key="app/src/main/res/layouts/Products/layout/activity_product_home.xml" value="0.22" />
         <entry key="app/src/main/res/layouts/Products/layout/nav_header_home.xml" value="0.22509057971014493" />
         <entry key="app/src/main/res/layouts/Products/layout/row_product_detail_list.xml" value="0.19972826086956522" />
-        <entry key="app/src/main/res/layouts/Products/layout/row_product_home_banner_list.xml" value="0.17028985507246377" />
-        <entry key="app/src/main/res/layouts/Products/layout/row_product_home_list.xml" value="0.20652173913043478" />
+        <entry key="app/src/main/res/layouts/Products/layout/row_product_home_banner_list.xml" value="0.5" />
+        <entry key="app/src/main/res/layouts/Products/layout/row_product_home_list.xml" value="0.33" />
         <entry key="app/src/main/res/layouts/User/layout/activity_register.xml" value="0.25" />
         <entry key="app/src/main/res/layouts/User/layout/activity_splash_screen.xml" value="0.22509057971014493" />
         <entry key="app/src/main/res/layouts/User/layout/activity_user_type.xml" value="0.22509057971014493" />

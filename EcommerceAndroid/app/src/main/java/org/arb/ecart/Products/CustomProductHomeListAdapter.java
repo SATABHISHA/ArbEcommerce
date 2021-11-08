@@ -48,6 +48,8 @@ public class CustomProductHomeListAdapter extends RecyclerView.Adapter<CustomPro
         holder.product_image.setBackgroundResource(productListModelArrayList.get(position).getImage());
 //        holder.product_image.setImageDrawable(productListModelArrayList.get(position).getImage());
         holder.price.setText(productListModelArrayList.get(position).getPrice());
+        holder.product_name.setText(productListModelArrayList.get(position).getProduct_name());
+        holder.discounted_price.setText(productListModelArrayList.get(position).getDiscounted_price());
 
 
     }
@@ -59,7 +61,7 @@ public class CustomProductHomeListAdapter extends RecyclerView.Adapter<CustomPro
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView price;
+        public TextView price, product_name, discounted_price;
         ImageView product_image;
         RelativeLayout relative_layout;
 
@@ -70,6 +72,8 @@ public class CustomProductHomeListAdapter extends RecyclerView.Adapter<CustomPro
             product_image = itemView.findViewById(R.id.image);
             price = itemView.findViewById(R.id.price);
             relative_layout = itemView.findViewById(R.id.relativeLayout);
+            product_name = itemView.findViewById(R.id.product_name);
+            discounted_price = itemView.findViewById(R.id.discounted_price);
 
             relative_layout.setOnClickListener(new View.OnClickListener() {
                 @Override

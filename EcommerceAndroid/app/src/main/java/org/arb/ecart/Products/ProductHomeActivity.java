@@ -139,23 +139,31 @@ public class ProductHomeActivity extends AppCompatActivity implements Navigation
 
     public void LoadData(){
         ProductListModel productListModel = new ProductListModel();
-        productListModel.setImage(R.drawable.oppo);
-        productListModel.setPrice("Rs 8000");
+        productListModel.setImage(R.drawable.androidmobile);
+        productListModel.setPrice("Rs 12999");
+        productListModel.setProduct_name("Samsung Galaxy M21");
+        productListModel.setDiscounted_price("Rs 11500");
         productListModelArrayList.add(productListModel);
 
         ProductListModel productListModel1 = new ProductListModel();
-        productListModel1.setImage(R.drawable.oppo);
-        productListModel1.setPrice("Rs 8000");
+        productListModel1.setImage(R.drawable.firetvstickamazon);
+        productListModel1.setPrice("Rs 3999");
+        productListModel1.setProduct_name("Amazon Fire TV Stick");
+        productListModel1.setDiscounted_price("Rs 3150");
         productListModelArrayList.add(productListModel1);
 
         ProductListModel productListModel2 = new ProductListModel();
-        productListModel2.setImage(R.drawable.oppo);
-        productListModel2.setPrice("Rs 8000");
+        productListModel2.setImage(R.drawable.ledtv);
+        productListModel2.setPrice("Rs 49000");
+        productListModel2.setProduct_name("LG Smart TV 50 Inch");
+        productListModel2.setDiscounted_price("Rs 46500");
         productListModelArrayList.add(productListModel2);
 
         ProductListModel productListModel3 = new ProductListModel();
-        productListModel3.setImage(R.drawable.oppo);
-        productListModel3.setPrice("Rs 8000");
+        productListModel3.setImage(R.drawable.mixergrinder);
+        productListModel3.setPrice("Rs 2175");
+        productListModel3.setProduct_name("Jaipan Mixer Grinder");
+        productListModel3.setDiscounted_price("Rs 1950");
         productListModelArrayList.add(productListModel3);
 
         recycler_view.setAdapter(customProductHomeListAdapter);

@@ -13,10 +13,10 @@
     -->
     <ImageView
         android:id="@+id/image"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
         android:layout_centerHorizontal="true"
-        android:background="@drawable/star"
+        android:background="@drawable/androidmobile"
         android:scaleType="fitXY" />
 
     <TextView
@@ -24,9 +24,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/image"
-        android:background="@android:color/transparent"
-        android:textColor="#ffffff"
+        android:layout_marginTop="8dp"
         android:layout_centerHorizontal="true"
-        android:text="Mobiles" />
+        android:background="@android:color/transparent"
+        android:text="Mobiles"
+        android:textColor="#ffffff"
+        android:textSize="12sp" />
 
 </RelativeLayout>
