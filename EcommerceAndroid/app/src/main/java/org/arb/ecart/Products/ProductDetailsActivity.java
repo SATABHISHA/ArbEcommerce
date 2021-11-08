@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class ProductDetailsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     AlertDialog.Builder builder;
     CoordinatorLayout coordinatorLayout;
-    TextView tv_nodata;
+    TextView tv_nodata, tv_product_name, tv_strike, tv_price;
     RecyclerView recycler_view;
     public static CustomProductDetailsAdapter customProductDetailsAdapter;
     ArrayList<ProductListModel> productListModelArrayList = new ArrayList<>();
@@ -67,6 +67,9 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
 
 //        ll_recycler = findViewById(R.id.ll_recycler);
         tv_nodata = findViewById(R.id.tv_nodata);
+        tv_product_name = findViewById(R.id.tv_product_name);
+        tv_strike = findViewById(R.id.tv_strike);
+        tv_price = findViewById(R.id.tv_price);
 
         //==========Recycler code initializing and setting layoutManager starts======
         recycler_view = findViewById(R.id.recycler_view);
@@ -77,6 +80,9 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
         recycler_view.setLayoutManager(gridLayoutManager);
         //==========Recycler code initializing and setting layoutManager ends======
 
+        tv_product_name.setText(ProductHomeActivity.product_name);
+        tv_strike.setText(ProductHomeActivity.strike_price);
+        tv_price.setText(ProductHomeActivity.price);
         LoadData();
     }
     @Override

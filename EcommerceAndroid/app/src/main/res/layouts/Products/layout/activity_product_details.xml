@@ -17,22 +17,21 @@
             android:id="@+id/app_bar_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
-            android:fitsSystemWindows="true"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
-
+            android:background="#323031"
+            android:theme="@style/Theme.Design.NoActionBar"
+            android:fitsSystemWindows="true">
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="#ffffff"
+                android:layout_height="wrap_content"
+                android:background="#323031"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
 
                 <RelativeLayout
+                    android:id="@+id/rl_1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
 
                     <!--  <TextView
                           android:id="@+id/tv_logout"
@@ -46,32 +45,69 @@
                           android:layout_marginRight="15dp" /> -->
                     <ImageView
                         android:id="@+id/img_profile"
-                        android:layout_width="35dp"
+                        android:layout_width="0dp"
                         android:layout_height="35dp"
                         android:layout_alignParentRight="true"
                         android:layout_centerVertical="true"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/profileblack" />
+                        android:layout_marginRight="10dp" />
 
                     <ImageView
                         android:id="@+id/img_cart"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
                         android:layout_toLeftOf="@id/img_profile"
-                        android:background="@drawable/cartblack" />
+                        android:background="@drawable/shoppingcarticon" />
 
                     <ImageView
                         android:id="@+id/img_wishlist"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
                         android:layout_centerVertical="true"
                         android:layout_marginRight="10dp"
                         android:layout_toLeftOf="@id/img_cart"
-                        android:background="@drawable/wishlistblack" />
+                        android:background="@drawable/wishlisticon" />
                 </RelativeLayout>
+
             </androidx.appcompat.widget.Toolbar>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/layout_custom_search"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                >
+
+                <EditText
+                    android:id="@+id/ed_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@id/img_search_logo"
+                    android:background="@null"
+                    android:hint="Search here"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:textSize="17sp"></EditText>
+
+                <ImageView
+                    android:id="@+id/img_search_logo"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="0dp"
+                    android:padding="5dp"
+                    android:src="@drawable/magnifier" />
+
+            </RelativeLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
         <RelativeLayout
@@ -81,9 +117,26 @@
             android:background="#ffffff"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+            <RelativeLayout
+                android:id="@+id/rl_banner"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#E7400C"
+                android:gravity="center">
+
+                <!-- <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_banner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:layout_marginTop="0dp"
+                    android:scrollbars="horizontal" /> -->
+            </RelativeLayout>
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_below="@id/rl_banner"
                 android:layout_above="@id/ll_button"
                 android:layout_marginBottom="20dp">
 
@@ -103,14 +156,15 @@
                         android:layout_marginTop="0dp"
                         android:layout_marginRight="0dp"
                         android:background="@drawable/layout6"
+                        android:padding="1dp"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="350dp"
                             android:layout_height="350dp"
                             android:layout_gravity="center_horizontal"
-                            android:layout_marginLeft="2dp"
-                            android:layout_marginRight="2dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
                             android:background="@drawable/firetvstickamazon" />
 
                         <androidx.cardview.widget.CardView
@@ -170,6 +224,7 @@
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/tv_product_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Oppo Reno 3"
@@ -177,11 +232,13 @@
                         android:textSize="15sp" />
 
                     <TextView
+                        android:id="@+id/tv_strike"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         android:text="Actual Price INR 8000"
                         android:textColor="#000000"
+                        android:background="@drawable/strikethrough"
                         android:textSize="18sp" />
 
                     <LinearLayout
@@ -190,6 +247,7 @@
                         android:orientation="horizontal">
 
                         <TextView
+                            android:id="@+id/tv_price"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="INR 6400"
@@ -197,14 +255,14 @@
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
-                        <TextView
+                       <!-- <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
                             android:text="(20% Discount)"
                             android:textColor="#E42727"
                             android:textSize="18sp"
-                            android:textStyle="normal" />
+                            android:textStyle="normal" /> -->
                     </LinearLayout>
                 </LinearLayout>
             </ScrollView>
@@ -219,11 +277,24 @@
                  <RelativeLayout
                      android:layout_width="match_parent"
                      android:layout_height="match_parent"
+                     android:background="#E7400C"
                      android:layout_gravity="center"
                      android:gravity="center"
                      android:layout_weight="1">
 
                      <TextView
+                         android:id="@+id/tv_buy_now"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:layout_gravity="center"
+                         android:layout_weight="1"
+                         android:gravity="center"
+                         android:text="Buy Now"
+                         android:textColor="#ffffff"
+                         android:textSize="19sp"
+                         android:textStyle="bold" />
+
+                    <!-- <TextView
                          android:id="@+id/tv_quote"
                          android:layout_width="wrap_content"
                          android:layout_height="wrap_content"
@@ -239,7 +310,7 @@
                          android:layout_centerHorizontal="true"
                          android:text="for Bulk Order"
                          android:textSize="15sp"
-                         android:textColor="#5A5A5A"/>
+                         android:textColor="#5A5A5A"/> -->
                  </RelativeLayout>
 
 
@@ -260,7 +331,8 @@
                     android:layout_weight="1"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:textColor="#000000"
+                    android:background="#E7400C"
+                    android:textColor="#ffffff"
                     android:textStyle="bold"
                     android:textSize="19sp"
                     android:text="Add to Cart"/>

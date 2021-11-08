@@ -80,6 +80,9 @@ public class CustomProductHomeListAdapter extends RecyclerView.Adapter<CustomPro
                 public void onClick(View view) {
                     final int position = getAdapterPosition();
 
+                    ProductHomeActivity.product_name = productListModelArrayList.get(position).getProduct_name();
+                    ProductHomeActivity.price = productListModelArrayList.get(position).getPrice();
+                    ProductHomeActivity.strike_price = productListModelArrayList.get(position).getDiscounted_price();
 //                    od_request_id = outDoorListModelArrayList.get(position).getOd_request_id();
                     Intent i = new Intent(context, ProductDetailsActivity.class);
                     context.startActivity(i);

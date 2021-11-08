@@ -31,6 +31,7 @@ public class ProductHomeActivity extends AppCompatActivity implements Navigation
     CoordinatorLayout coordinatorLayout;
     TextView tv_nodata;
     RecyclerView recycler_view, recycler_view_banner;
+    public static String product_name = "", price = "", strike_price = "";
     public static CustomProductHomeBannerListAdapter customProductHomeBannerListAdapter;
     ArrayList<BannerListModel> bannerListModelArrayList = new ArrayList<>();
 
