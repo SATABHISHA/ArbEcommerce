@@ -1,8 +1,10 @@
 package org.arb.ecart.Products;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -24,10 +26,11 @@ import org.arb.ecart.R;
 
 import java.util.ArrayList;
 
-public class ProductDetailsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class ProductDetailsActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
     AlertDialog.Builder builder;
     CoordinatorLayout coordinatorLayout;
     TextView tv_nodata, tv_product_name, tv_strike, tv_price;
+    ImageView img_back;
     RecyclerView recycler_view;
     public static CustomProductDetailsAdapter customProductDetailsAdapter;
     ArrayList<ProductListModel> productListModelArrayList = new ArrayList<>();
@@ -37,7 +40,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
         setContentView(R.layout.activity_product_details);
 
         //--------------------NAVIGATION DRAWER PORTIONS--------------------------//
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        /*Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -45,22 +48,17 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
                 R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
+*/
         //---------------------------------------To change Navigation drawer icon
-        getSupportActionBar().setHomeButtonEnabled(true);
+       /* getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeAsUpIndicator(R.drawable.menublack);
 
         builder = new AlertDialog.Builder(this);
         NavigationView navigationView = findViewById(R.id.nav_view);
         final View header = navigationView.getHeaderView(0);
-        /*tv_fullname=header.findViewById(R.id.tv_fullname);
-        tv_companynam=header.findViewById(R.id.tv_companynam);*/
-        //  ed_userpassword=findViewById(R.id.ed_userpassword);
         coordinatorLayout=findViewById(R.id.cordinatorLayout);
-       /* tv_fullname.setText(userSingletonModel.getFull_employee_name());
-        tv_companynam.setText(userSingletonModel.getCompany_name());*/
-        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setNavigationItemSelectedListener(this);*/
         //-----------------------END OF NAVIGATION DRAWER PORTIONS--------------------//
 
         customProductDetailsAdapter = new CustomProductDetailsAdapter(this,productListModelArrayList);
@@ -70,6 +68,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
         tv_product_name = findViewById(R.id.tv_product_name);
         tv_strike = findViewById(R.id.tv_strike);
         tv_price = findViewById(R.id.tv_price);
+        img_back = findViewById(R.id.img_back);
 
         //==========Recycler code initializing and setting layoutManager starts======
         recycler_view = findViewById(R.id.recycler_view);
@@ -83,6 +82,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
         tv_product_name.setText(ProductHomeActivity.product_name);
         tv_strike.setText(ProductHomeActivity.strike_price);
         tv_price.setText(ProductHomeActivity.price);
+        img_back.setOnClickListener(this);
         LoadData();
     }
     @Override
@@ -133,5 +133,18 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
 
         recycler_view.setAdapter(customProductDetailsAdapter);
 
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.img_back:
+                Intent intent_product_home = new Intent(ProductDetailsActivity.this,ProductHomeActivity.class);
+                intent_product_home.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent_product_home);
+                break;
+            default:
+                break;
+        }
     }
 }
