@@ -1,6 +1,7 @@
 package org.arb.ecart.Products;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,6 +67,8 @@ public class CustomProductDetailsSliderAdapter extends
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "This is item in position " + position, Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(context, ProductDetailsProductImageActivity.class);
+                context.startActivity(i);
             }
         });
     }

@@ -26,6 +26,8 @@
             android:screenOrientation="portrait"/>
         <activity android:name=".Products.ProductDetailsActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".Products.ProductDetailsProductImageActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

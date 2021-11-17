@@ -113,8 +113,17 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
             @Override
             public void onIndicatorClicked(int position) {
                 Log.i("GGG", "onIndicatorClicked: " + sliderView.getCurrentPagePosition());
+                startActivity(new Intent(ProductDetailsActivity.this, ProductDetailsProductImageActivity.class));
             }
+
         });
+
+        /*sliderView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ProductDetailsActivity.this, ProductDetailsProductImageActivity.class));
+            }
+        });*/
         //---added on 17th Nov, code ends---
     }
 
