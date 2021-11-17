@@ -39,6 +39,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_details);
 
+
         //--------------------NAVIGATION DRAWER PORTIONS--------------------------//
         /*Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
