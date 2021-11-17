@@ -11,14 +11,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationView;
@@ -43,7 +39,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
     public static CustomProductDetailsAdapter customProductDetailsAdapter;
     ArrayList<ProductListModel> productListModelArrayList = new ArrayList<>();
     SliderView sliderView;
-    private SliderAdapterExample adapter;
+    private CustomProductDetailsSliderAdapter adapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,7 +96,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
         sliderView = findViewById(R.id.imageSlider);
 
 
-        adapter = new SliderAdapterExample(this);
+        adapter = new CustomProductDetailsSliderAdapter(this);
         sliderView.setSliderAdapter(adapter);
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
