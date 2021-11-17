@@ -127,6 +127,7 @@ public class ProductDetailsActivity extends AppCompatActivity implements Navigat
         //---added on 17th Nov, code ends---
     }
 
+
     //=====added on 17th Nov, code starts======
     public void LoadSliderItems() {
         List<SliderItem> sliderItemList = new ArrayList<>();
