@@ -23,6 +23,7 @@ class ProductDetailsViewController: UIViewController,  UICollectionViewDelegate,
         designablebtn_cart.addBorder(side: .left, color: UIColor(hexFromString: "7F7F7F"), width: 0.6)
         //-----code to add button border, ends------
         
+        
         //MyAttendanceLog OnClick
         let tapGestureRecognizerBulOrderDesignablebtn = UITapGestureRecognizer(target: self, action: #selector(DesignablebtnBulkOrder(tapGestureRecognizer:)))
         designablebtn_bulk_order_quote.isUserInteractionEnabled = true
