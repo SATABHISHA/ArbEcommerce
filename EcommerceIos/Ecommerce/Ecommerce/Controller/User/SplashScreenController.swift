@@ -22,7 +22,8 @@ class SplashScreen: UIViewController {
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 1){ // change your delay here
               // redirect to next vc
-            self.performSegue(withIdentifier: "usertype", sender: nil)
+//            self.performSegue(withIdentifier: "usertype", sender: nil)
+            self.performSegue(withIdentifier: "home", sender: nil)
             }
     }
     private func setupProgrammaticProgressBar() {

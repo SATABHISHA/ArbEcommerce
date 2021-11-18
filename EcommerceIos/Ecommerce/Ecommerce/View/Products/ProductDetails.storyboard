@@ -289,6 +289,14 @@
             <point key="canvasLocation" x="92.753623188405811" y="63.586956521739133"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="401-zJ-TSX">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+        <designable name="Bae-i3-ThS">
+            <size key="intrinsicContentSize" width="30" height="34"/>
+        </designable>
+    </designables>
     <resources>
         <image name="cartblack" width="48" height="48"/>
         <image name="menublack" width="35" height="35"/>
