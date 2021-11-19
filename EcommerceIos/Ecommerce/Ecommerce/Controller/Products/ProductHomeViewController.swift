@@ -9,7 +9,7 @@ import UIKit
 
 class ProductHomeViewController: UIViewController , UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
    
-    let dataSource: [String] = ["Oppo","Vivo","Nokia"]
+    let dataSource: [String] = ["Oppo","Vivo","Nokia","Nokia","Nokia","Nokia","Nokia","Nokia","Nokia"]
 
     @IBOutlet weak var CollectionViewProducts: UICollectionView!
     override func viewDidLoad() {
@@ -18,6 +18,7 @@ class ProductHomeViewController: UIViewController , UICollectionViewDelegate, UI
         CollectionViewProducts.delegate = self
         CollectionViewProducts.dataSource = self
         // Do any additional setup after loading the view.
+        ChangeStatusBarColor()
     }
     
 
